@@ -9,8 +9,8 @@ RPROMPT=`builtin print '%{\E[33m\E[1;33m%}%2C%{\E[0m%}'`
 autoload -Uz colors
 colors
 
-# 履歴の定義。複数ノードで独立して管理
-HISTFILE="${HOME}/.history-${HOST}"
+# 履歴の定義。
+HISTFILE="${HOME}/.history"
 HISTSIZE=10000
 SAVEHIST=8000
 
