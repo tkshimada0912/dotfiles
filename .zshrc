@@ -130,3 +130,10 @@ if [ -n "${TMUX_PANE}" ] ; then
     ##PROMPT=`builtin print '%{\E[33m\E[1;36m%}%n@%m:'${TMUX_PANE}'%%%{\E[0m%} '`
     PROMPT=`builtin print '%{\E[33m\E[1;32m%}%n@%m%%%{\E[0m%} '`
 fi
+
+########################################
+# GOLANG
+
+export GOPATH="$HOME/.go"
+export PATH=$PATH:$HOME/.go/bin
+
