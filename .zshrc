@@ -137,3 +137,12 @@ fi
 export GOPATH="$HOME/.go"
 export PATH=$PATH:$HOME/.go/bin
 
+
+########################################
+# powerline
+
+if [ -f ${HOME}/Library/Python/2.7/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh ]; then
+	powerline-daemon -q
+	source ${HOME}/Library/Python/2.7/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh
+fi
+
