@@ -145,7 +145,7 @@ PLCONF="powerline/bindings/zsh/powerline.zsh"
 for DIR in ${PLDIRS}; do
 	if [ -f ${HOME}/${DIR}/${PLCONF} ]; then
 		powerline-daemon -q
-		source ${HOME}/${DIR}/${PLCONF}
+		. ${HOME}/${DIR}/${PLCONF}
 	fi
 done
 
