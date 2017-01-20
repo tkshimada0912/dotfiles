@@ -100,7 +100,7 @@ alias   bd=popd
 bindkey '^R' history-incremental-pattern-search-backward
 
 # pecoが入っていたらpecoを使う
-if which peco > /dev/null; then
+if which peco > /dev/null 2>&1; then
   function peco-select-history() {
     local tac
     if which tac > /dev/null; then
