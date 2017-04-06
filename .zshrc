@@ -140,12 +140,19 @@ export PATH=$PATH:$HOME/.go/bin
 
 ########################################
 # powerline
-PLDIRS=(Library/Python/2.{1..9}/lib/python/site-packages .local/lib/python2.{1..9}/site-packages)
+PLUDIRS=(Library/Python/2.{1..9}/lib/python/site-packages .local/lib/python2.{1..9}/site-packages)
+PLSDIRS=(/usr/local/lib/python2.{1..9}/{site,dist}-packages)
 PLCONF="powerline/bindings/zsh/powerline.zsh"
-for DIR in ${PLDIRS}; do
+for DIR in ${PLUDIRS}; do
 	if [ -f ${HOME}/${DIR}/${PLCONF} ]; then
 		powerline-daemon -q
 		. ${HOME}/${DIR}/${PLCONF}
+	fi
+done
+for DIR in ${PLSDIRS}; do
+	if [ -f ${DIR}/${PLCONF} ]; then
+		powerline-daemon -q
+		. ${DIR}/${PLCONF}
 	fi
 done
 
