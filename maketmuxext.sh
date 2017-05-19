@@ -10,5 +10,6 @@ PLCONF="powerline/bindings/tmux/powerline.conf"
 for DIR in ${PLUDIRS} ${PLSDIRS}; do
         if [ -f ${DIR}/${PLCONF} ]; then
                 echo source \"${DIR}/${PLCONF}\" >> ${TMUXEXT}
+		break
         fi
 done
