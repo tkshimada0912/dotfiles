@@ -146,6 +146,7 @@ for DIR in ${PLUDIRS} ${PLSDIRS}; do
 	if [ -f ${DIR}/${PLCONF} ]; then
 		powerline-daemon -q
 		. ${DIR}/${PLCONF}
+		break
 	fi
 done
 
