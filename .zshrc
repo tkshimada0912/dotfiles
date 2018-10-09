@@ -142,6 +142,11 @@ export PATH=$PATH:$HOME/.go/bin
 PLUDIRS=(${HOME}/Library/Python/2.{1..9}/lib/python/site-packages ${HOME}/.local/lib/python2.{1..9}/site-packages)
 PLSDIRS=(/usr/local/lib/python2.{1..9}/{site,dist}-packages)
 PLCONF="powerline/bindings/zsh/powerline.zsh"
+
+### macOS LANG setting
+if [ X${LANG} \=\= 'X' -a `uname -s` \=\= 'Darwin' ]; then export LANG='ja_JP.UTF-8' ;fi
+###
+
 for DIR in ${PLUDIRS} ${PLSDIRS}; do
 	if [ -f ${DIR}/${PLCONF} ]; then
 		powerline-daemon -q
@@ -150,3 +155,9 @@ for DIR in ${PLUDIRS} ${PLSDIRS}; do
 	fi
 done
 
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/shimada/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/shimada/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/shimada/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/shimada/google-cloud-sdk/completion.zsh.inc'; fi

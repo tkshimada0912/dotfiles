@@ -1,3 +1,6 @@
 {
-	"detachKeys": "ctrl-q,q"
+  "detachKeys" : "ctrl-q,q",
+  "auths" : {
+
+  }
 }
