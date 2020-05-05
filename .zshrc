@@ -140,7 +140,7 @@ export PATH=$PATH:$HOME/.go/bin
 ########################################
 # powerline
 PLUDIRS=(${HOME}/Library/Python/2.{1..9}/lib/python/site-packages ${HOME}/.local/lib/python2.{1..9}/site-packages)
-PLSDIRS=(/usr/local/lib/python2.{1..9}/{site,dist}-packages)
+PLSDIRS=(/usr/local/lib/python2.{1..9}/{site,dist}-packages /usr/share)
 PLCONF="powerline/bindings/zsh/powerline.zsh"
 
 ### macOS LANG setting
