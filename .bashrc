@@ -1,4 +1,4 @@
-for DIR in ${HOME}/Library/Python/2.{1..9}/bin ${HOME}/.local/bin ; do
+for DIR in ${HOME}/Library/Python/{2,3}.{1..9}/bin ${HOME}/.local/bin ; do
 	if [ -d ${DIR} ] ; then
 		PATH=${PATH}:${DIR}
 	fi
@@ -12,7 +12,7 @@ export PATH=$PATH:$HOME/.go/bin
 
 ########################################
 # powerline
-PLDIRS=`echo Library/Python/2.{1..9}/lib/python/site-packages .local/lib/python2.{1..9}/site-packages`
+PLDIRS=`echo Library/Python/{2,3}.{1..9}/lib/python/site-packages .local/lib/python{2,3}.{1..9}/site-packages`
 PLCONF="powerline/bindings/bash/powerline.sh"
 
 ### macOS LANG setting
