@@ -161,3 +161,4 @@ if [ -f '/Users/shimada/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/sh
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/shimada/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/shimada/google-cloud-sdk/completion.zsh.inc'; fi
+
